@@ -1,0 +1,21 @@
+.body {
+    background: whitesmoke;
+    background-size: cover;
+    justify-content: center;
+    align-content: center;
+}
+
+#GitHubLogo {
+    position: fixed;
+    margin-top: -25vh;
+    margin-left: 15vw;
+    scale: 0.4;
+}
+
+#GitHubLink {
+    position: fixed;
+    margin-top: 70vh;
+    margin-left: 32vw;
+    font-size: 5vh;
+    font-family: Tahoma;
+}
