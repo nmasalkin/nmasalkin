@@ -1,21 +1,63 @@
-.body {
-    background: whitesmoke;
-    background-size: cover;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    color: black;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    color: black;
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    gap: 10px;
 }
 
-#GitHubLogo {
-    position: fixed;
-    margin-top: -25vh;
-    margin-left: 15vw;
-    scale: 0.4;
+.socials a {
+    text-decoration: none;
 }
 
-#GitHubLink {
-    position: fixed;
-    margin-top: 70vh;
-    margin-left: 32vw;
-    font-size: 5vh;
-    font-family: Tahoma;
+.tech-stack {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.tech-stack h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.badges img {
+    height: 30px;
 }
