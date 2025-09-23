@@ -240,7 +240,7 @@ export default function Portfolio() {
                                                 className="mr-2 h-4 w-4 transition group-hover:translate-x-0.5"/>Связаться</a>
                                         </Button>
                                         <Button variant="secondary" asChild size="lg" className="group">
-                                            <a href="https://voronezh.hh.ru/resume_converter/%D0%9C%D0%B0%D1%81%D0%B0%D0%BB%D0%BA%D0%B8%D0%BD%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B0%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=6b1cd514ff0e21ed230039ed1f4c51414c6935&type=pdf&hhtmFrom=&hhtmSource=resume" download>
+                                            <a href="/Масалкин Никита Сергеевич.pdf" download>
                                                 <Download className="mr-2 h-4 w-4"/>Скачать резюме
                                             </a>
                                         </Button>
