@@ -106,7 +106,19 @@ button, a, .card, .pill, .chip, .nav a, .shadow, input, textarea {
 .grid.contacts {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(4, 1fr); /* ровно 4 карточки */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid.contacts {
+    grid-template-columns: repeat(2, 1fr); /* планшеты */
+  }
+}
+
+@media (max-width: 640px) {
+  .grid.contacts {
+    grid-template-columns: 1fr; /* телефоны */
+  }
 }
 
 /* Navigation */
