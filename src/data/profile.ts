@@ -3,7 +3,7 @@ export const profile = {
   title: 'Программист Java Junior',
   location: 'Воронеж, Россия',
   email: 'nmasalkin96@yandex.ru',
-  phone: '+7 (919) 242-19-91',
+  phone: '+7 (900) 929-79-62',
   telegram: 'https://t.me/el_nikitinho',
   github: 'https://github.com/nmasalkin',
   roles: ['Программист, разработчик'],

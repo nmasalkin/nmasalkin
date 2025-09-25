@@ -109,6 +109,10 @@ button, a, .card, .pill, .chip, .nav a, .shadow, input, textarea {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* Контакты: делаем ссылку блочной и курсор-«рука» на всю карточку */
+.grid.contacts > a { display: block; }
+.grid.contacts > a .card { cursor: pointer; }
+
 @media (max-width: 1024px) {
   .grid.contacts {
     grid-template-columns: repeat(2, 1fr); /* планшеты */

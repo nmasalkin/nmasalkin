@@ -11,7 +11,10 @@ const Hero: React.FC = () => {
           <motion.div variants={fadeInUp}>
             <div className="badge" aria-label="Роль"><strong>{profile.title}</strong></div>
             <h1>{profile.name}</h1>
-            <p className="lead">Backend‑разработчик на Java. Люблю аккуратный код и красивые UI‑мелочи.</p>
+            <p className="lead">
+              Backend-разработчик на Java. Стараюсь писать чистый и поддерживаемый код, уделяя внимание деталям
+              реализации.
+            </p>
             <div className="cta">
               <a className="button primary" href="/Масалкин%20Никита%20Сергеевич.pdf" download>📄 Скачать резюме (PDF)</a>
               <a className="button secondary" href="#contact">✉️ Связаться</a>
