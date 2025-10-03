@@ -4,7 +4,7 @@ export const profile = {
   location: 'Воронеж, Россия',
   email: 'nmasalkin96@yandex.ru',
   phone: '+7 (900) 929-79-62',
-  telegram: 'https://t.me/el_nikitinho',
+  telegram: 'https://t.me/nmasalkin',
   github: 'https://github.com/nmasalkin',
   roles: ['Программист, разработчик'],
   modes: ['частичная занятость', 'стажировка'],
