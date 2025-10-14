@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Масалкин Никита Сергеевич',
   title: 'Программист Java Junior',
-  location: 'Воронеж, Россия',
+  location: 'Воронеж',
   email: 'nmasalkin96@yandex.ru',
   phone: '+7 (900) 929-79-62',
   telegram: 'https://t.me/nmasalkin',
