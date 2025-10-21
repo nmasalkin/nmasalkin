@@ -18,10 +18,13 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -p "${{ vars.DEPLOY_PORT }}" "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" << 'EOSSH'
+          ssh -p "${{ vars.DEPLOY_PORT }}" "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" <<EOSSH
             set -e
             cd "${{ vars.DEPLOY_PATH }}"
             git pull --no-rebase origin main
             npm ci || npm install
+            cat <<EOF > .env
+VITE_YANDEX_METRIKA_ID=${{ secrets.VITE_YANDEX_METRIKA_ID }}
+EOF
             npm run build
           EOSSH
