@@ -24,8 +24,8 @@ jobs:
             git pull --no-rebase origin main
             npm ci || npm install
             cat <<EOF > .env
-              VITE_YANDEX_METRIKA_ID=${{ secrets.VITE_YANDEX_METRIKA_ID }}
-            EOF
+          VITE_YANDEX_METRIKA_ID=${{ secrets.VITE_YANDEX_METRIKA_ID }}
+          EOF
             chmod 600 .env
             npm run build
           EOSSH
