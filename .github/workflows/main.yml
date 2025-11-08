@@ -9,32 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
-
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Deploy to server
         run: |
-          sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" ssh -p "${{ vars.DEPLOY_PORT }}" "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" <<'EOSSH'
-            set -Eeuo pipefail
-
-            if [ ! -d "${{ vars.DEPLOY_PATH }}" ]; then
-              echo "Deploy directory not found. Cloning repository..."
-              git clone -b main "${{ vars.REPO_URL }}" "${{ vars.DEPLOY_PATH }}"
-            fi
-
-            cd "${{ vars.DEPLOY_PATH }}"
-            git pull --no-rebase origin main
-            npm ci || npm install
-
-            cat <<EOF > .env
-          VITE_YANDEX_METRIKA_ID=${{ secrets.VITE_YANDEX_METRIKA_ID }}
-          EOF
-
-            chmod 600 .env
-            npm run build
-          EOSSH
+          sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" \
+            ssh -tt -o StrictHostKeyChecking=no -p "{{ vars.DEPLOY_PORT }}" \
+            "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" \
+            'bash -lc "
+              set -e
+              cd nmasalkin
+              git pull --no-rebase origin main
+              npm ci || npm install
+              npm run build
+            "'
