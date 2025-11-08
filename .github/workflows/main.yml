@@ -15,7 +15,7 @@ jobs:
       - name: Deploy to server
         run: |
           sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" \
-            ssh -tt -o StrictHostKeyChecking=no -p "{{ vars.DEPLOY_PORT }}" \
+            ssh -tt -o StrictHostKeyChecking=no \
             "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" \
             'bash -lc "
               set -e
