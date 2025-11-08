@@ -19,7 +19,7 @@ jobs:
 
       - name: Deploy to server
         run: |
-          sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -p "${{ vars.DEPLOY_PORT }}" "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" <<'EOSSH'
+          sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" ssh -p "${{ vars.DEPLOY_PORT }}" "${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}" <<'EOSSH'
             set -Eeuo pipefail
 
             if [ ! -d "${{ vars.DEPLOY_PATH }}" ]; then
