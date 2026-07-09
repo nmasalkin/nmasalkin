@@ -1,0 +1,7 @@
+services:
+  nmasalkin-site:
+    build: .
+    container_name: nmasalkin-site
+    ports:
+      - "3000:80"
+    restart: unless-stopped
